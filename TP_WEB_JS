@@ -1,0 +1,59 @@
+Exercice1:
+let N1=prompt("donne la premier valeur:");
+let N2=prompt("donne la deuxiem valeur:");
+N1 = parseFloat(N1);
+N2 =parseFloat(N2);
+if(isNaN(N1) || isNaN(N2)){
+
+    console.log("Errur:veullez entrer des nombre valide.");
+}
+else{
+    var somme = N1 + N2 ;  
+    var produit = N1 * N2 ;
+    var différence = N1-N2 ;
+}
+if(N2 !== 0){
+    var quotient = N1/N2;
+    console.log("somme: "+ somme );
+    console.log("le produit:"+ produit );
+    console.log("la différence est:"  + différence );
+    console.log("quotient:"+ quotient );
+}
+else{
+    console.log("Impossible de diviser par 0 !.");
+}
+Exercice2:
+let nombre = Math.floor(Math.random() * 10) + 1;
+let saisie;
+let essais = 0;
+while (saisie != nombre) {
+    saisie = Number(prompt("Donne un nombre entre 1 et 10 :"));
+    essais++;
+    if (saisie < nombre) {
+        alert("Le nombre est plus grand");
+    }else if (saisie > nombre) {
+        alert("Le nombre est plus petit");
+    } else {
+        alert("Bravo ! Trouvé en " + essais + " tentatives");
+    }
+}
+exercice3:
+function lesQuize(){
+    let QUESTIONS = [
+        ["Quelle est la capital du Maroc ?","Rabat"],
+        ["combien de jours dans la semaine ?","7"],
+        ["Quelle la premiere lettre de l'alphabet ?","A"]
+    ];
+    let x =0;
+    for(let i =0 ; i < QUESTIONS.length; i++ ){
+    let reponse = prompt(QUESTIONS[i][0]);
+    if(reponse && reponse.toLowerCase() === QUESTIONS[i][1]){
+    alert("Réponse juste");
+    x++;
+} else{
+    alert("Reponse fausse");
+}
+}
+alert("score:" + x +"/"+ QUESTIONS.length);
+}
+lesQuize();
